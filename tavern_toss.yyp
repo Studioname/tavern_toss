@@ -1,7 +1,7 @@
 {
   "resources": [
     {"id":{"name":"ds_grid_find","path":"scripts/ds_grid_find/ds_grid_find.yy",},"order":2,},
-    {"id":{"name":"mine","path":"scripts/mine/mine.yy",},"order":3,},
+    {"id":{"name":"pickup","path":"scripts/pickup/pickup.yy",},"order":3,},
     {"id":{"name":"spr_undo","path":"sprites/spr_undo/spr_undo.yy",},"order":5,},
     {"id":{"name":"spr_turn_right","path":"sprites/spr_turn_right/spr_turn_right.yy",},"order":2,},
     {"id":{"name":"generate_terrain","path":"scripts/generate_terrain/generate_terrain.yy",},"order":4,},
@@ -24,7 +24,6 @@
     {"id":{"name":"move","path":"scripts/move/move.yy",},"order":0,},
     {"id":{"name":"construct_menu_button","path":"scripts/construct_menu_button/construct_menu_button.yy",},"order":2,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":7,},
-    {"id":{"name":"check_for_treasure","path":"scripts/check_for_treasure/check_for_treasure.yy",},"order":10,},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":6,},
     {"id":{"name":"spr_random_direction","path":"sprites/spr_random_direction/spr_random_direction.yy",},"order":7,},
     {"id":{"name":"obj_grid_controller","path":"objects/obj_grid_controller/obj_grid_controller.yy",},"order":4,},

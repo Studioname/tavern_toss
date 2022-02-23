@@ -25,32 +25,56 @@ room_set_height(room, 1280+64);
 #macro SNAP_MOUSE_X_TO_GRID MOUSE_X_TO_GRID * CELL_SIZE
 #macro SNAP_MOUSE_Y_TO_GRID MOUSE_Y_TO_GRID * CELL_SIZE
 
-//global.substrates
-#macro SOIL -7
-#macro ROCK -11
-#macro SAND -15
-#macro SEAM -19
-#macro GEMS -23
-//global.minerals
-#macro CLAY -8
-#macro TIN_ORE -9
-#macro IRON_ORE -10
-#macro STONE -12
-#macro COAL -13
-#macro COPPER_ORE -14
-#macro QUARTZ -16
-#macro FLINT -17
-#macro AMBER -18
-#macro SILVER_ORE -20
-#macro GOLD_ORE -21
-#macro PLATINUM_ORE -22
-#macro RUBY -24
-#macro SAPPHIRE -25
-#macro EMERALD -26
+//collision entities
+#macro ROUND_TABLE -7
+#macro SQUARE_TABLE -8
+#macro STOOL -9
+#macro BAR -10
+#macro BARRELS -11
 
-#macro PLAYER -48
-#macro TREASURE -49
-#macro VOID -50
+//pickups
+//magic items
+#macro POTION_OF_STRENGTH -20
+#macro HEALING_POTION -21
+#macro MAGIC_POTION -22
+
+//weapons
+#macro SWORD -40
+#macro MACE -41
+#macro SHIELD -42
+#macro STAFF -43
+
+//armour
+#macro HELMET -60
+#macro BREASTPLATE -61
+#macro MAGIC_BOOTS -62
+
+//misc
+#macro BEER -80
+#macro WINE -81
+#macro HAM -82
+
+//game
+#macro PLAYER -100
+#macro VOID -101
+#macro TRAPDOOR -102
+
+//enemies
+#macro PATRON -120
+#macro BRAWLER -121
+#macro MERCENARY -123
+#macro WIZARD -124
+#macro DWARF -125
+#macro ELF -126
+
+//debuffs
+//can only hop in straight line
+#macro BUCKET -140
+//slides forward in straight line
+#macro UNPLEASANT_PUDDLE -141
+
+//loot
+#macro POUCH -160
 
 //bitmasking values
 #macro NORTH 1
@@ -73,22 +97,9 @@ global.game_paused = false;
 global.alarm_speed = 10;
 #macro ALARM_SPEED global.alarm_speed
 
-//global.minerals tracker
+//global.collision tracker
 
-global.minerals_tracker = {
-	clay: 0,
-	tin_ore: 0,
-	iron_ore: 0,
-	stone: 0,
-	coal: 0,
-	copper_ore: 0,
-	quartz: 0,
-	flint: 0,
-	amber: 0,
-	silver_ore: 0,
-	gold_ore: 0,
-	platinum_ore: 0,
-	ruby: 0,
-	sapphire: 0,
-	emerald: 0
+global.loot = 0;
+global.looted_items = {
+	pouch: 0,	
 }

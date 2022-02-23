@@ -4,7 +4,7 @@ function paint_tiles(_grid, _tilemap){
 	//iterate through terrain map and paint tiles accordingly
 	var i;
 	var j;
-	if _grid == global.substrates {
+	if _grid == global.floor {
 
 		for (i = 0; i < ds_grid_width(_grid) -1; i++){
 			for (j = 0; j < ds_grid_height(_grid) -1; j++){
@@ -32,7 +32,7 @@ function paint_tiles(_grid, _tilemap){
 			}
 		}
 	}
-	if _grid == global.minerals {
+	if _grid == global.collision {
 		for (i = 0; i < ds_grid_width(_grid) -1; i++){
 			for (j = 0; j < ds_grid_height(_grid) -1; j++){
 				

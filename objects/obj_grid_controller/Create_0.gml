@@ -1,37 +1,31 @@
 /// @obj_controller
 
-//create global global.substrates layer and tilemap
-global.floor_layer = layer_create(-1);
-global.floor_tilemap = layer_tilemap_create(global.floor_layer, 0, 0, t_substrates, room_width, room_height);
-//create global global.collision layer and tilemap
-global.collision_layer = layer_create(-2);
-global.collision_tilemap = layer_tilemap_create(global.collision_layer, 0, 0, t_collision, room_width, room_height);
-//global.substrates and global.collision grids
-global.floor = GRID;
-global.collision = GRID;
+//some of our collision tiles need to be placed next to other collision tiles of
+//the same type. For instance we want bar tiles to be connected to bar tiles
+//we therefore need a system of ensuring that when our tiles make sense and
+//contribute towards the gameplay. For instance the bar could be a number of different
+//shapes, one of which might be a medium sized line of cells running 1 cell away from
+//the room edge, which is a pain in the arse to get stuck behind. Round tables and
+//rectangular ones might be drawn using ds_grid_set region for instance
+
+//after this we get the paint_tiles script to work
+
+//initialise stuff
+global.floor = GRID
+global.floor_layer = noone;
+global.floor_tilemap = noone;
+global.collisions = GRID;
+global.collisions_layer = noone;
+global.collisions_tilemap = noone;
 global.objects = GRID;
-//set each tile to default
-//ds_grid_set_region(global.substrates, 0, 0, GRID_W(global.substrates), GRID_H(global.substrates), noone);
-ds_grid_set_region(global.collision, 0, 0, GRID_W(global.collision), GRID_H(global.collision), noone);
-ds_grid_set_region(global.objects, 0, 0, GRID_W(global.objects), GRID_H(global.objects), noone);
+global.objects_layer = noone;
+global.objects_tilemap = noone;
+//generate grids
+generate_grid(global.floor, [global.floor_layer, -1], [global.floor_tilemap, t_floor]);
+generate_grid(global.collisions, [global.collisions_layer, -1], [global.collisions_tilemap, t_collisions]);
+generate_grid(global.objects, [global.objects_layer, -1], [global.objects_tilemap, t_objects]);
 
-//we set the outer cells of 'objects' to VOID for collision purposes
-var _grid_w = ds_grid_width(global.objects) -1;
-var _grid_h = ds_grid_height(global.objects) -1;
-ds_grid_set_region(global.collision,0,0,_grid_w, 0, VOID);
-ds_grid_set_region(global.collision,0,_grid_h,_grid_w, _grid_h, VOID);
-ds_grid_set_region(global.collision,0,0,0,_grid_h, VOID);
-ds_grid_set_region(global.collision,_grid_w,0,_grid_w,_grid_h, VOID);
-
-//run the substrate generator
-generate_terrain(global.floor);
-//generate collision depending on substrate
-generate_terrain(global.collision);
-//paint tiles
-//paint_tiles(global.substrates, global.substrates_tilemap);
-paint_tiles(global.collision, global.collision_tilemap);
-//choose a random grid cell for trapdoor
-
+//create trapdoor for escape
 while !ds_grid_find(global.objects, TRAPDOOR){
 	var _random_x = irandom_range(2, ds_grid_width(global.objects)-3);
 	var _random_y = irandom_range(2, ds_grid_height(global.objects)-3);

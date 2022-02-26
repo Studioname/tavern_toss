@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_random_direction","path":"sprites/spr_random_direction/spr_random_direction.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_random_direction",
     "tags": [],
     "resourceType": "GMSequence",

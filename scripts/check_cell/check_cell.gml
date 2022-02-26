@@ -1,4 +1,4 @@
-///@check_cell()
+ ///@check_cell()
 function check_cell(grid){
 	
 	//get current coords

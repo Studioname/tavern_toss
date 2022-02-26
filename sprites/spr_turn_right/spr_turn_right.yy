@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_turn_right","path":"sprites/spr_turn_right/spr_turn_right.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_turn_right",
     "tags": [],
     "resourceType": "GMSequence",

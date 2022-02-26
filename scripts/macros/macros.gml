@@ -9,6 +9,7 @@ room_set_height(room, 1280+64);
 #macro CELLS_W room_width div 32
 #macro CELLS_H room_height div 32
 #macro GRID ds_grid_create(CELLS_W + 1, CELLS_H + 1)
+//we have a one cell buffer around our grid
 #macro GRID_W ds_grid_width
 #macro GRID_H ds_grid_height
 
@@ -25,56 +26,106 @@ room_set_height(room, 1280+64);
 #macro SNAP_MOUSE_X_TO_GRID MOUSE_X_TO_GRID * CELL_SIZE
 #macro SNAP_MOUSE_Y_TO_GRID MOUSE_Y_TO_GRID * CELL_SIZE
 
-//collision entities
-#macro ROUND_TABLE -7
-#macro SQUARE_TABLE -8
-#macro STOOL -9
-#macro BAR -10
-#macro BARRELS -11
+//floor
+#macro FLOOR -6
 
-//pickups
-//magic items
-#macro POTION_OF_STRENGTH -20
-#macro HEALING_POTION -21
-#macro MAGIC_POTION -22
+global.collisions_data = {
+	round_table : {
+		tileset: noone,
+		val: -10,
+		odds: 16,
+	},
+	square_table : {
+		tileset: noone,
+		val: -11,
+		odds: 16,
+	},
+	stool : {
+		tileset: noone,
+		val: -12,
+		odds: 2,
+	},
+	bar : {
+		tileset: noone,
+		val: -13,
+		odds: noone,
+	},
+	barrels : {
+		tileset: noone,
+		val: -14,
+		odds: 10,
+	},
+	plant_pot : {
+		tileset: noone,
+		val: -15,
+		odds: 20,
+	},
+	fireplace : {
+		tileset: noone,
+		val: -16,
+		odds: noone,
+	},
+	fire : {
+		tileset: noone,
+		val: -17,
+		odds: noone,
+	},
+}
 
-//weapons
-#macro SWORD -40
-#macro MACE -41
-#macro SHIELD -42
-#macro STAFF -43
+//item data
+global.item_data = {
+	//magic items
+	potion_of_strength : new item(noone, "Potion of Strength", -60, 40, fnc_potion_of_strength),
+	potion_of_healing : new item(noone, "Potion of Healing", -61, 60, fnc_potion_of_healing),
+	potion_of_polymorph : new item(noone, "Potion of Polymorph", -62, 80, fnc_potion_of_polymorph),
+	
+	//weapons
+	sword : new item(noone, "Sword", -90, 60, fnc_sword),
+	mace : new item(noone, "Mace", -91, 60, fnc_mace),
+	shield : new item(noone, "Shield", -92, 60, fnc_shield),
+	staff : new item(noone, "Staff", -93, 60, fnc_staff),
 
-//armour
-#macro HELMET -60
-#macro BREASTPLATE -61
-#macro MAGIC_BOOTS -62
+	//armour
+	helmet : new item(noone, "Helmet", -120, 60, fnc_helmet),
+	breastplate : new item(noone, "Breastplate", -120, 60, fnc_breastplate),
+	boots : new item(noone, "Boots", -120, 80, fnc_boots),
+	
+	//misc
+	beer : new item(noone, "Beer", -150, 60, fnc_beer),
+	wine : new item(noone, "Wine", -150, 60, fnc_wine),
+	ham : new item(noone, "Ham", -150, 60, fnc_ham),
+	
+	//loot
+	pouch : new item(noone, "Pouch", -180, 40, fnc_pouch),
+	
+	//debuffs
+	bucket : new item(noone, "Bucket", -210, 40, fnc_bucket),
+	unpleasant_puddle : new item(noone, "Unpleasant Puddle", -211, 40, fnc_unpleasant_puddle),
+}
 
-//misc
-#macro BEER -80
-#macro WINE -81
-#macro HAM -82
+global.enemy_data = {
+	//enemies
+	patron : new enemy(noone, "Patron", -250, 10, 10, 1, fnc_patron),
+	brawler : new enemy(noone, "Brawler", -251, 20, 15, 1, fnc_brawler),
+	mercenary : new enemy(noone, "Mercenary", -252, 20, 20, 1, fnc_mercenary),
+	dwarf : new enemy(noone, "Dwarf", -253, 30, 25, 1, fnc_dwarf),
+	elf : new enemy(noone, "Elf", -254, 20, 25, 1, fnc_elf),
+	wizard : new enemy(noone, "Wizard", -255, 40, 30, 1, fnc_wizard),
+	troll : new enemy(noone, "Troll", -256, 50, 20, 2, fnc_troll),
+}
+
+global.item_data = ds_list_create();
+ds_copy_struct_to_list(item_data, global.item_data);
+global.enemy_data = ds_list_create();
+ds_copy_struct_to_list(enemy_data, global.enemy_data);
+
+
 
 //game
-#macro PLAYER -100
-#macro VOID -101
-#macro TRAPDOOR -102
-
-//enemies
-#macro PATRON -120
-#macro BRAWLER -121
-#macro MERCENARY -123
-#macro WIZARD -124
-#macro DWARF -125
-#macro ELF -126
-
-//debuffs
-//can only hop in straight line
-#macro BUCKET -140
-//slides forward in straight line
-#macro UNPLEASANT_PUDDLE -141
-
-//loot
-#macro POUCH -160
+#macro PLAYER -270
+#macro VOID -271
+#macro TRAPDOOR -272
+#macro EXIT -273
 
 //bitmasking values
 #macro NORTH 1

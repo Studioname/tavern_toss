@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_turn_around","path":"sprites/spr_turn_around/spr_turn_around.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_turn_around",
     "tags": [],
     "resourceType": "GMSequence",

@@ -138,7 +138,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_minerals","path":"sprites/spr_minerals/spr_minerals.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_minerals",
     "tags": [],
     "resourceType": "GMSequence",

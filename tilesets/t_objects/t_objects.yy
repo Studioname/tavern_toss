@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_substrates",
-    "path": "sprites/spr_substrates/spr_substrates.yy",
+    "name": "spr_objects",
+    "path": "sprites/spr_objects/spr_objects.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -9,7 +9,7 @@
   "tileyoff": 0,
   "tilehsep": 0,
   "tilevsep": 0,
-  "spriteNoExport": false,
+  "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -17,7 +17,7 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 2,
-  "tile_count": 6,
+  "tile_count": 3,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -26,9 +26,6 @@
       0,
       1,
       2,
-      3,
-      4,
-      5,
     ],
     "SerialiseFrameCount": 1,
   },
@@ -42,7 +39,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "t_substrates",
+  "name": "t_objects",
   "tags": [],
   "resourceType": "GMTileSet",
 }

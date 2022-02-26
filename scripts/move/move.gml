@@ -1,6 +1,6 @@
 ///@move();
 function move(){
-	if check_cell(global.collision) != VOID{
+	if check_cell(global.collisions) != VOID{
 		switch global.facing{
 			case UP:
 				y-=CELL_SIZE;
@@ -16,7 +16,6 @@ function move(){
 				break;
 		}
 		//we check for treasure before setting value to player
-		mine();
 		pickup();
 		ds_stack_pop(global.commands);
 	}

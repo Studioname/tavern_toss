@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_undo","path":"sprites/spr_undo/spr_undo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_undo",
     "tags": [],
     "resourceType": "GMSequence",

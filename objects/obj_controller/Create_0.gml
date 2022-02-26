@@ -5,6 +5,8 @@
 global.commands_template = ds_stack_create()
 //second stack
 global.commands = ds_stack_create();
+
+//initialise collisions, items and enemy structs
 //create grid_controller object
 instance_create_layer(0,0,"grid_controller", obj_grid_controller);
 

@@ -12,23 +12,25 @@
 
 //initialise stuff
 global.floor = GRID
-global.floor_layer = noone;
-global.floor_tilemap = noone;
+global.floor_layer = layer_create(-1);
+global.floor_tilemap = layer_tilemap_create(global.floor_layer, 0, 0, t_floor, room_width, room_height);
 global.collisions = GRID;
-global.collisions_layer = noone;
-global.collisions_tilemap = noone;
+global.collisions_layer = layer_create(-2);
+global.collisions_tilemap = layer_tilemap_create(global.collisions_layer, 0, 0, t_collisions, room_width, room_height);
 global.objects = GRID;
-global.objects_layer = noone;
-global.objects_tilemap = noone;
+global.objects_layer = layer_create(-3);
+global.objects_tilemap = layer_tilemap_create(global.objects_layer, 0, 0, t_objects, room_width, room_height);
 //generate grids
-generate_grid(global.floor, [global.floor_layer, -1], [global.floor_tilemap, t_floor]);
-generate_grid(global.collisions, [global.collisions_layer, -1], [global.collisions_tilemap, t_collisions]);
-generate_grid(global.objects, [global.objects_layer, -1], [global.objects_tilemap, t_objects]);
-
+generate_grid(global.floor, t_floor);
+generate_grid(global.collisions, t_collisions);
+generate_grid(global.objects, t_objects);
+generate_bar(global.collisions);
+//paint tiles
+paint_tiles(global.collisions, global.collisions_tilemap);
 //create trapdoor for escape
 while !ds_grid_find(global.objects, TRAPDOOR){
-	var _random_x = irandom_range(2, ds_grid_width(global.objects)-3);
-	var _random_y = irandom_range(2, ds_grid_height(global.objects)-3);
+	var _random_x = irandom_range(2, ds_grid_size_buffered([global.objects])-1);
+	var _random_y = irandom_range(2, ds_grid_size_buffered([global.objects])-1);
 	if _random_x != floor(ds_grid_width(global.objects)/2) and _random_y != 1 {
 		global.objects [# _random_x, _random_y] = TRAPDOOR;
 		break;

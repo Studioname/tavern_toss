@@ -1,5 +1,8 @@
 ///@array_find(variable, array)
 function array_find(_variable, _array){
+	if !is_array(_array){
+		return -1;
+	}
 	var _array_len = array_length(_array);
 	var i;
 	for (i=0;i<_array_len;i++){
@@ -7,6 +10,4 @@ function array_find(_variable, _array){
 			return i;
 		}
 	}
-	//else
-	return false;
 }

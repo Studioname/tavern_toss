@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "deprecated_funcs",
-    "path": "folders/Scripts/deprecated_funcs.yy",
+    "name": "data_structures",
+    "path": "folders/Scripts/data_structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "generate_clump_terrain",
+  "name": "ds_grid_get_indexes",
   "tags": [],
   "resourceType": "GMScript",
 }

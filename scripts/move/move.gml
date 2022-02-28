@@ -1,6 +1,7 @@
 ///@move();
 function move(){
-	if check_cell(global.collisions) != VOID{
+	var _next_cell = check_cell(global.collisions);
+	if !cell_is_solid(global.collisions_data, _next_cell) {
 		switch global.facing{
 			case UP:
 				y-=CELL_SIZE;

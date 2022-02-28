@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "deprecated_funcs",
-    "path": "folders/Scripts/deprecated_funcs.yy",
+    "name": "player",
+    "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "generate_clump_terrain",
+  "name": "cell_is_solid",
   "tags": [],
   "resourceType": "GMScript",
 }

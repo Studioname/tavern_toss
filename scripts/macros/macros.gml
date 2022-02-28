@@ -50,24 +50,34 @@ global.collisions_data = {
 		val: -13,
 		odds: noone,
 	},
-	barrels : {
+	rear_bar : {
 		tileset: noone,
 		val: -14,
+		odds: noone,
+	},
+	barrels : {
+		tileset: noone,
+		val: -15,
 		odds: 10,
 	},
 	plant_pot : {
 		tileset: noone,
-		val: -15,
+		val: -16,
 		odds: 20,
 	},
 	fireplace : {
 		tileset: noone,
-		val: -16,
+		val: -17,
 		odds: noone,
 	},
 	fire : {
 		tileset: noone,
-		val: -17,
+		val: -18,
+		odds: noone,
+	},
+	void : {
+		tileset : noone,
+		val: -59,
 		odds: noone,
 	},
 }
@@ -122,8 +132,9 @@ ds_copy_struct_to_list(enemy_data, global.enemy_data);
 
 
 //game
+#macro VOID -59
 #macro PLAYER -270
-#macro VOID -271
+#macro NO_PAINT_ZONE -271
 #macro TRAPDOOR -272
 #macro EXIT -273
 

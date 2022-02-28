@@ -13,7 +13,7 @@ function generate_bar(_grid){
 		//top side
 		case 0: 
 			//no paint zone
-			create_no_paint_zone(_grid, 1, _bar_start-1, _buffer-1, _bar_start+_bar_len+1, _buffer+1);
+			create_no_paint_zone(_grid, 1, _bar_start, _buffer, _bar_start+_bar_len+2, _buffer+2);
 			//front bar
 			ds_grid_set_region(_grid, _bar_start, _buffer, _bar_start+_bar_len, _buffer, global.collisions_data.bar.val);
 			//rear bar
@@ -22,21 +22,21 @@ function generate_bar(_grid){
 			
 		//left side
 		case 1: 
-			create_no_paint_zone(_grid, 1, _buffer-1, _bar_start-1, _buffer+1, _bar_start+_bar_len+1);
+			create_no_paint_zone(_grid, 1, _buffer, _bar_start, _buffer+2, _bar_start+_bar_len);
 			ds_grid_set_region(_grid, _buffer, _bar_start, _buffer, _bar_start+_bar_len, global.collisions_data.bar.val);
 			ds_grid_set_region(_grid, _buffer -2, _bar_start, _buffer -2, _bar_start+_bar_len, global.collisions_data.rear_bar.val);
 			break;
 			
 		//right side
 		case 2:
-			create_no_paint_zone(_grid, 1, ds_grid_size_buffered([_grid]) - _buffer -1, _bar_start-1, ds_grid_size_buffered([_grid]) - _buffer +1, _bar_start+_bar_len +1);
+			create_no_paint_zone(_grid, 1, ds_grid_size_buffered([_grid]) - _buffer -2, _bar_start-1, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len );
 			ds_grid_set_region(_grid, ds_grid_size_buffered([_grid]) - _buffer, _bar_start, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len, global.collisions_data.bar.val);
 			ds_grid_set_region(_grid, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start+_bar_len, global.collisions_data.rear_bar.val);
 			break;
 			
 		//bottom
 		case 3:
-			create_no_paint_zone(_grid, 1, _bar_start-1, ds_grid_size_buffered([_grid]) - _buffer -1, _bar_start+_bar_len+1, ds_grid_size_buffered([_grid]) - _buffer +1);
+			create_no_paint_zone(_grid, 1, _bar_start-3, ds_grid_size_buffered([_grid]) - _buffer -1, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer);
 			ds_grid_set_region(_grid, _bar_start, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer, global.collisions_data.bar.val);
 			ds_grid_set_region(_grid, _bar_start, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer +2, global.collisions_data.rear_bar.val);
 			break;

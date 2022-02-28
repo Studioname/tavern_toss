@@ -12,13 +12,13 @@
 
 //initialise stuff
 global.floor = GRID
-global.floor_layer = layer_create(-1);
+global.floor_layer = layer_create(15997);
 global.floor_tilemap = layer_tilemap_create(global.floor_layer, 0, 0, t_floor, room_width, room_height);
 global.collisions = GRID;
-global.collisions_layer = layer_create(-2);
+global.collisions_layer = layer_create(15998);
 global.collisions_tilemap = layer_tilemap_create(global.collisions_layer, 0, 0, t_collisions, room_width, room_height);
 global.objects = GRID;
-global.objects_layer = layer_create(-3);
+global.objects_layer = layer_create(15999);
 global.objects_tilemap = layer_tilemap_create(global.objects_layer, 0, 0, t_objects, room_width, room_height);
 //generate grids
 generate_grid(global.floor, t_floor);

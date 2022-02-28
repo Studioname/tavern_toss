@@ -14,6 +14,7 @@
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":0,},
     {"id":{"name":"fnc_potion_of_healing","path":"scripts/fnc_potion_of_healing/fnc_potion_of_healing.yy",},"order":1,},
     {"id":{"name":"template_menu_button","path":"scripts/template_menu_button/template_menu_button.yy",},"order":3,},
+    {"id":{"name":"collision","path":"scripts/collision/collision.yy",},"order":2,},
     {"id":{"name":"generate_terrain_d","path":"scripts/generate_terrain_d/generate_terrain_d.yy",},"order":0,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":3,},
     {"id":{"name":"spr_substrates","path":"sprites/spr_substrates/spr_substrates.yy",},"order":1,},

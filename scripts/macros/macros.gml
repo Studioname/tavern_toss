@@ -28,51 +28,57 @@ room_set_height(room, 1280+64);
 
 //floor
 #macro FLOOR -6
+#macro NO_PAINT_BUFFER 3
 
 global.collisions_data = {
-	round_table : {
+	wall : {
 		tileset: noone,
 		val: -10,
-		odds: 16,
+		odds: noone,
 	},
-	square_table : {
+	round_table : {
 		tileset: noone,
 		val: -11,
 		odds: 16,
 	},
-	stool : {
+	square_table : {
 		tileset: noone,
 		val: -12,
+		odds: 16,
+	},
+	stool : {
+		tileset: noone,
+		val: -13,
 		odds: 2,
 	},
 	bar : {
 		tileset: noone,
-		val: -13,
+		val: -14,
 		odds: noone,
 	},
 	rear_bar : {
 		tileset: noone,
-		val: -14,
+		val: -15,
 		odds: noone,
 	},
-	barrels : {
+	barrel : {
 		tileset: noone,
-		val: -15,
+		val: -16,
 		odds: 10,
 	},
 	plant_pot : {
 		tileset: noone,
-		val: -16,
+		val: -17,
 		odds: 20,
 	},
 	fireplace : {
 		tileset: noone,
-		val: -17,
+		val: -18,
 		odds: noone,
 	},
 	fire : {
 		tileset: noone,
-		val: -18,
+		val: -19,
 		odds: noone,
 	},
 	void : {

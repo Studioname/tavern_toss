@@ -1,5 +1,5 @@
-///@array_find(variable, array)
-function array_find(_array, _value){
+///@array_contains(variable, array)
+function array_contains(_array, _value){
 	if !is_array(_array){
 		return -1;
 	}
@@ -7,7 +7,8 @@ function array_find(_array, _value){
 	var i;
 	for (i=0;i<_array_len;i++){
 		if _array[i] == _value{
-			return i;
+			return true;
 		}
 	}
+	return false;
 }

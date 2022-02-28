@@ -26,6 +26,7 @@ generate_grid(global.collisions, t_collisions);
 generate_grid(global.objects, t_objects);
 generate_bar(global.collisions);
 generate_walls(global.collisions);
+generate_objects_adjacent_to_wall(global.collisions);
 //paint tiles
 paint_tiles(global.collisions, global.collisions_tilemap);
 //create trapdoor for escape

@@ -3,7 +3,7 @@
 function random_direction(){
 	var _facing = global.facing;
 	var _choices = [UP, DOWN, LEFT, RIGHT];
-	var _facing_index = array_find(_facing, _choices);
+	var _facing_index = array_find(_choices, _facing);
 	array_delete(_choices,_facing_index, 1);
 	randomise();
 	var _choice = choose(_choices[0], _choices[1], _choices[2]);

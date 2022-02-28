@@ -41,6 +41,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":7,},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":6,},
     {"id":{"name":"spr_random_direction","path":"sprites/spr_random_direction/spr_random_direction.yy",},"order":7,},
+    {"id":{"name":"create_no_paint_zone","path":"scripts/create_no_paint_zone/create_no_paint_zone.yy",},"order":6,},
     {"id":{"name":"obj_grid_controller","path":"objects/obj_grid_controller/obj_grid_controller.yy",},"order":4,},
     {"id":{"name":"fnc_dwarf","path":"scripts/fnc_dwarf/fnc_dwarf.yy",},"order":3,},
     {"id":{"name":"fnc_helmet","path":"scripts/fnc_helmet/fnc_helmet.yy",},"order":0,},

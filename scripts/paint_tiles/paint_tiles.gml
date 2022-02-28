@@ -17,8 +17,10 @@ function paint_tiles(_grid, _tilemap){
 			//collisions
 			if _grid == global.collisions {
 				switch _grid_value {
+					case NO_PAINT_ZONE: 
+						tilemap_set_at_pixel(_tilemap, 3, i * CELL_SIZE, j * CELL_SIZE);
+						break;
 					case global.collisions_data.bar.val:
-
 						tilemap_set_at_pixel(_tilemap, 1, i * CELL_SIZE, j * CELL_SIZE);
 						break;
 					case global.collisions_data.rear_bar.val:

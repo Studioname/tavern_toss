@@ -14,6 +14,14 @@ function generate_terrain(grid){
 	if grid == global.collisions {
 		for (i = 0; i < ds_grid_size_buffered([grid]); i++){
 			for (j = 0; j < ds_grid_size_buffered([grid]); j++){
+				if grid [# i, j] == noone {
+					//create no paint zone
+					
+				}
+				//before creating each object, we create a bigger no paint zone which
+				//extends a few cells beyond object. We then paint object over this.
+				//we check for default values and just create objects if they're not in the
+				//no paint zone.
 				//do stuff in each cell
 				
 				//we generate the features that are present in every room first

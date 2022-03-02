@@ -58,7 +58,7 @@ global.instructions[3][3] = [];
 
 global.instructions[4][0] = spr_random_direction;
 global.instructions[4][1] = _draw_x_anchor  + (ICON_SIZE*4);
-global.instructions[4][2] = random_direction;
+global.instructions[4][2] = choose_random_direction;
 global.instructions[4][3] = [];
 
 global.instructions[5][0] = spr_loop;

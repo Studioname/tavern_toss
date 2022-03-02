@@ -12,8 +12,8 @@ if !ds_stack_empty(global.commands) {
 		case move :
 				move();
 				break;
-		case random_direction:
-				random_direction();
+		case choose_random_direction:
+				choose_random_direction();
 				break;
 	}
 	alarm[0] = ALARM_SPEED;

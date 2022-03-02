@@ -12,4 +12,5 @@ function ds_grid_find(_id, _value){
 			}
 		}
 	}
+	return false;
 }

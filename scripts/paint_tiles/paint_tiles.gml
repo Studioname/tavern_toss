@@ -20,14 +20,30 @@ function paint_tiles(_grid, _tilemap){
 					case NO_PAINT_ZONE: 
 						tilemap_set_at_pixel(_tilemap, 3, i * CELL_SIZE, j * CELL_SIZE);
 						break;
-					case global.collisions_data.wall.val:
+					case global.collision_tile_elements.wall.val:
 						tilemap_set_at_pixel(_tilemap, 4, i * CELL_SIZE, j * CELL_SIZE);
 						break;
-					case global.collisions_data.bar.val:
+					case global.collision_tile_elements.bar.val:
 						tilemap_set_at_pixel(_tilemap, 1, i * CELL_SIZE, j * CELL_SIZE);
 						break;
-					case global.collisions_data.rear_bar.val:
+					case global.collision_tile_elements.rear_bar.val:
 						tilemap_set_at_pixel(_tilemap, 2, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					//testing
+					case WALL_OBJECTS.barrel.val:
+						tilemap_set_at_pixel(_tilemap, 6, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case WALL_OBJECTS.plant_pot.val:
+						tilemap_set_at_pixel(_tilemap, 7, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ROOM_OBJECTS.round_table.val:
+						tilemap_set_at_pixel(_tilemap, 11, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ROOM_OBJECTS.square_table.val:
+						tilemap_set_at_pixel(_tilemap, 5, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ROOM_OBJECTS.stool.val:
+						tilemap_set_at_pixel(_tilemap, 8, i * CELL_SIZE, j * CELL_SIZE);
 						break;
 				}
 			}

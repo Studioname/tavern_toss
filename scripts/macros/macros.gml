@@ -28,65 +28,83 @@ room_set_height(room, 1280+64);
 
 //floor
 #macro FLOOR -6
-#macro NO_PAINT_BUFFER 3
+#macro NO_PAINT_BUFFER 2
 
-global.collisions_data = {
+global.collision_tile_elements = {
 	wall : {
 		tileset: noone,
 		val: -10,
-		odds: noone,
-	},
-	round_table : {
-		tileset: noone,
-		val: -11,
-		odds: 16,
-	},
-	square_table : {
-		tileset: noone,
-		val: -12,
-		odds: 16,
-	},
-	stool : {
-		tileset: noone,
-		val: -13,
-		odds: 2,
 	},
 	bar : {
 		tileset: noone,
-		val: -14,
-		odds: noone,
+		val: -11,
 	},
 	rear_bar : {
 		tileset: noone,
-		val: -15,
-		odds: noone,
+		val: -12,
 	},
-	barrel : {
-		tileset: noone,
-		val: -16,
-		odds: 10,
-	},
-	plant_pot : {
-		tileset: noone,
-		val: -17,
-		odds: 20,
-	},
-	fireplace : {
-		tileset: noone,
-		val: -18,
-		odds: noone,
-	},
-	fire : {
-		tileset: noone,
-		val: -19,
-		odds: noone,
+	exit_door : {
+		tileset : noone,
+		val: -13,	
 	},
 	void : {
 		tileset : noone,
 		val: -59,
-		odds: noone,
+	},
+
+}
+global.collision_object_elements = {
+	wall_objects : {
+		barrel : {
+			tileset: noone,
+			val: -20,
+			odds: 20,
+		},
+		plant_pot : {
+			tileset: noone,
+			val: -21,
+			odds: 20,
+		},
+	},
+	room_objects : {
+		round_table : {
+			tileset: noone,
+			val: -30,
+			odds: 16,
+			size: 2,
+		},
+		square_table : {
+			tileset: noone,
+			val: -31,
+			odds: 16,
+			size: 2,
+		},
+		stool : {
+			tileset: noone,
+			val: -32,
+			odds: 1,
+			size: 1,
+		},
+	
+		fireplace : {
+			tileset: noone,
+			val: -33,
+			odds: noone,
+			size: 1,
+		},
+		fire : {
+			tileset: noone,
+			val: -34,
+			odds: noone,
+			size: 1,
+		},
 	},
 }
+
+//macros for quick reference
+#macro COLLISION_TILES global.collision_tile_elements
+#macro WALL_OBJECTS global.collision_object_elements.wall_objects
+#macro ROOM_OBJECTS global.collision_object_elements.room_objects
 
 //item data
 global.item_data = {

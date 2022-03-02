@@ -6,7 +6,7 @@
     "path": "folders/Scripts/terrain.yy",
   },
   "resourceVersion": "1.0",
-  "name": "generate_objects_adjacent_to_wall",
+  "name": "generate_collision_objects_data",
   "tags": [],
   "resourceType": "GMScript",
 }

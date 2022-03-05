@@ -58,45 +58,56 @@ global.collision_object_elements = {
 		barrel : {
 			tileset: noone,
 			val: -20,
-			odds: 20,
+			odds: 12,
 		},
 		plant_pot : {
 			tileset: noone,
 			val: -21,
-			odds: 20,
+			odds: 12,
 		},
 	},
 	room_objects : {
-		round_table : {
+		banquet_table : {
 			tileset: noone,
 			val: -30,
-			odds: 16,
-			size: 2,
+			odds: 50,
+			w: 10,
+			h: 2,
+		},
+		round_table : {
+			tileset: noone,
+			val: -31,
+			odds: 10,
+			w: 2,
+			h: 2,
 		},
 		square_table : {
 			tileset: noone,
-			val: -31,
-			odds: 16,
-			size: 2,
+			val: -32,
+			odds: 10,
+			w: 2,
+			h: 2,
 		},
 		stool : {
 			tileset: noone,
-			val: -32,
-			odds: 1,
-			size: 1,
-		},
-	
-		fireplace : {
-			tileset: noone,
 			val: -33,
-			odds: noone,
-			size: 1,
+			odds: 1,
+			w: 0,
+			h: 0,
 		},
-		fire : {
+		fireplace : {
 			tileset: noone,
 			val: -34,
 			odds: noone,
-			size: 1,
+			w: 0,
+			h: 0,
+		},
+		fire : {
+			tileset: noone,
+			val: -35,
+			odds: noone,
+			w: 0,
+			h: 0,
 		},
 	},
 }
@@ -146,6 +157,8 @@ global.enemy_data = {
 	elf : new enemy(noone, "Elf", -254, 20, 25, 1, fnc_elf),
 	wizard : new enemy(noone, "Wizard", -255, 40, 30, 1, fnc_wizard),
 	troll : new enemy(noone, "Troll", -256, 50, 20, 2, fnc_troll),
+	barman : new enemy(noone, "Barman", -257,0,20,1000,fnc_barman),
+	bouncer : new enemy(noone, "Bouncer", -258,0,20,1000,fnc_barman),
 }
 
 global.item_data = ds_list_create();
@@ -158,9 +171,8 @@ ds_copy_struct_to_list(enemy_data, global.enemy_data);
 //game
 #macro VOID -59
 #macro PLAYER -270
-#macro NO_PAINT_ZONE -271
-#macro TRAPDOOR -272
-#macro EXIT -273
+#macro ESCAPE_HATCH -272
+#macro EXIT_DOOR -273
 
 //bitmasking values
 #macro NORTH 1
@@ -185,7 +197,11 @@ global.alarm_speed = 10;
 
 //global.collision tracker
 
-global.loot = 0;
+global.gold = 0;
 global.looted_items = {
 	pouch: 0,	
 }
+
+//loop tracker
+global.loop_tracker = [];
+global.loop_index = noone;

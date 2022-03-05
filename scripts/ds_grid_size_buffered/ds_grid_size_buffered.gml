@@ -2,6 +2,9 @@
 //arg0[0] = grid;
 //arg[1] = str(width or height);
 function ds_grid_size_buffered(arg0){
+	if !ds_exists(arg0[0],ds_type_grid){
+		return -1;
+	}
 	var _arr_len = array_length(arg0);
 	if _arr_len == 1 and ds_exists(arg0[0], ds_type_grid){
 		if ds_grid_width(arg0[0]) == ds_grid_height(arg0[0]){

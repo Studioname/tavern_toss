@@ -12,9 +12,6 @@ function generate_bar(_grid){
 	switch _side{
 		//top side
 		case 0: 
-			//no paint zone
-			//we use min/max to make sure we don't overshoot the walls we've painted
-			create_no_paint_zone(_grid, 3, _bar_start, 1, _bar_start+_bar_len, _buffer);
 			//front bar
 			ds_grid_set_region(_grid, _bar_start, _buffer, _bar_start+_bar_len, _buffer, global.collision_tile_elements.bar.val);
 			//rear bar
@@ -23,21 +20,18 @@ function generate_bar(_grid){
 			
 		//left side
 		case 1: 
-			create_no_paint_zone(_grid, 3, _buffer, _bar_start, _buffer, _bar_start+_bar_len);
 			ds_grid_set_region(_grid, _buffer, _bar_start, _buffer, _bar_start+_bar_len, global.collision_tile_elements.bar.val);
 			ds_grid_set_region(_grid, _buffer -2, _bar_start, _buffer -2, _bar_start+_bar_len, global.collision_tile_elements.rear_bar.val);
 			break;
 			
 		//right side
 		case 2:
-			create_no_paint_zone(_grid, 3, ds_grid_size_buffered([_grid])-_buffer, _bar_start, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len);
 			ds_grid_set_region(_grid, ds_grid_size_buffered([_grid]) - _buffer, _bar_start, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len, global.collision_tile_elements.bar.val);
 			ds_grid_set_region(_grid, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start+_bar_len, global.collision_tile_elements.rear_bar.val);
 			break;
 			
 		//bottom
 		case 3:
-			create_no_paint_zone(_grid, 3, _bar_start, ds_grid_size_buffered([_grid])-_buffer, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer);
 			ds_grid_set_region(_grid, _bar_start, ds_grid_size_buffered([_grid]) - _buffer, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer, global.collision_tile_elements.bar.val);
 			ds_grid_set_region(_grid, _bar_start, ds_grid_size_buffered([_grid]) - _buffer +2, _bar_start+_bar_len, ds_grid_size_buffered([_grid]) - _buffer +2, global.collision_tile_elements.rear_bar.val);
 			break;

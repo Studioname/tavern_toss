@@ -8,9 +8,12 @@ function ds_grid_find(_id, _value){
 	for (i = 0; i < ds_grid_width(_id); i++){
 		for (j = 0; j < ds_grid_height(_id); j++){
 			if _id [# i, j] == _value {
-				return true;
+				var _arr;
+				_arr[0] = i;
+				_arr[1] = j;
+				return _arr;
 			}
 		}
 	}
-	return false;
+	return undefined;
 }

@@ -17,9 +17,6 @@ function paint_tiles(_grid, _tilemap){
 			//collisions
 			if _grid == global.collisions {
 				switch _grid_value {
-					case NO_PAINT_ZONE: 
-						tilemap_set_at_pixel(_tilemap, 3, i * CELL_SIZE, j * CELL_SIZE);
-						break;
 					case global.collision_tile_elements.wall.val:
 						tilemap_set_at_pixel(_tilemap, 4, i * CELL_SIZE, j * CELL_SIZE);
 						break;
@@ -28,6 +25,12 @@ function paint_tiles(_grid, _tilemap){
 						break;
 					case global.collision_tile_elements.rear_bar.val:
 						tilemap_set_at_pixel(_tilemap, 2, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case EXIT_DOOR:
+						tilemap_set_at_pixel(_tilemap, 12, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ESCAPE_HATCH:
+						tilemap_set_at_pixel(_tilemap, 13, i * CELL_SIZE, j * CELL_SIZE);
 						break;
 					//testing
 					case WALL_OBJECTS.barrel.val:
@@ -44,6 +47,9 @@ function paint_tiles(_grid, _tilemap){
 						break;
 					case ROOM_OBJECTS.stool.val:
 						tilemap_set_at_pixel(_tilemap, 8, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ROOM_OBJECTS.banquet_table.val:
+						tilemap_set_at_pixel(_tilemap, 5, i * CELL_SIZE, j * CELL_SIZE);
 						break;
 				}
 			}

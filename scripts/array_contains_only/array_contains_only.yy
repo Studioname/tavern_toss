@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "terrain",
-    "path": "folders/Scripts/terrain.yy",
+    "name": "data_structures",
+    "path": "folders/Scripts/data_structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "create_no_paint_zone",
+  "name": "array_contains_only",
   "tags": [],
   "resourceType": "GMScript",
 }

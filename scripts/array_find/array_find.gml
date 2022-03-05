@@ -10,4 +10,5 @@ function array_find(_array, _value){
 			return i;
 		}
 	}
+	return false;
 }

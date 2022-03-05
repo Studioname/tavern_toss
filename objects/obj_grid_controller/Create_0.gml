@@ -26,17 +26,14 @@ generate_grid(global.collisions, t_collisions);
 generate_grid(global.objects, t_objects);
 generate_bar(global.collisions);
 generate_walls(global.collisions);
+generate_exit_door(global.collisions);
+generate_banquet_tables(global.collisions);
 generate_collision_objects_data(global.collisions, ROOM_OBJECTS);
+generate_stools(global.collisions);
 generate_collision_objects_data(global.collisions, WALL_OBJECTS);
+generate_escape_hatch(global.collisions);
 //paint tiles
 paint_tiles(global.collisions, global.collisions_tilemap);
 paint_tiles(global.floor, global.floor_tilemap);
-//create trapdoor for escape
-while !ds_grid_find(global.objects, TRAPDOOR){
-	var _random_x = irandom_range(2, ds_grid_size_buffered([global.objects])-1);
-	var _random_y = irandom_range(2, ds_grid_size_buffered([global.objects])-1);
-	if _random_x != floor(ds_grid_width(global.objects)/2) and _random_y != 1 {
-		global.objects [# _random_x, _random_y] = TRAPDOOR;
-		break;
-	}
-}
+
+

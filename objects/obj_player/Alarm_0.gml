@@ -21,5 +21,5 @@ if !ds_stack_empty(global.commands) {
 
 else if ds_stack_empty(global.commands){
 	ds_stack_copy(global.commands, global.commands_template);
-	alarm[0] = ALARM_SPEED;
+	alarm[0] = 1;
 }

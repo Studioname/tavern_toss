@@ -61,9 +61,9 @@ global.instructions[4][1] = _draw_x_anchor  + (ICON_SIZE*4);
 global.instructions[4][2] = choose_random_direction;
 global.instructions[4][3] = [];
 
-global.instructions[5][0] = spr_loop;
+global.instructions[5][0] = spr_teleport;
 global.instructions[5][1] = _draw_x_anchor  + (ICON_SIZE*5);
-global.instructions[5][2] = loop;
+global.instructions[5][2] = teleport;
 global.instructions[5][3] = [];
 
 global.instructions[6][0] = spr_undo;

@@ -30,7 +30,7 @@ function generate_collision_objects_data(_grid, _struct){
 					var _object_type = choose_weighted(WALL_OBJECTS.plant_pot, WALL_OBJECTS.plant_pot.odds, WALL_OBJECTS.barrel, WALL_OBJECTS.barrel.odds,);
 					//if the tile is adjacent to a wall and not the rear bar
 					var _cell_data = ds_grid_get_adjacent_cell_data(_grid,i,j,8); 
-					if array_contains([_cell_data], [COLLISION_TILES.wall.val]) and !array_contains([_cell_data],[COLLISION_TILES.rear_bar.val, ROOM_OBJECTS.stool.val, EXIT_DOOR]){
+					if array_contains([_cell_data], [COLLISION_TILES.wall.val]) and !array_contains([_cell_data],[COLLISION_TILES.rear_bar.val, COLLISION_TILES.bar.val, ROOM_OBJECTS.stool.val, EXIT_DOOR, ESCAPE_HATCH]){
 						//we roll the odds of each, if we roll successfully assign value and break
 						var _odds = _object_type.odds;
 						if irandom(_odds) == _odds{

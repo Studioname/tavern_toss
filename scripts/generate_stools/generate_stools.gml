@@ -6,7 +6,7 @@ function generate_stools(_grid){
 			if _grid[#i,j] == noone{
 				_cell_data = ds_grid_get_adjacent_cell_data(_grid,i,j,4);
 				if array_contains([_cell_data], [ROOM_OBJECTS.round_table.val, ROOM_OBJECTS.square_table.val, COLLISION_TILES.bar.val, ROOM_OBJECTS.banquet_table.val]){
-					if !array_contains([_cell_data],[COLLISION_TILES.rear_bar.val]){
+					if !array_contains([_cell_data],[COLLISION_TILES.rear_bar.val, COLLISION_TILES.wall.val]){
 						if irandom(ROOM_OBJECTS.stool.odds) == ROOM_OBJECTS.stool.odds{
 							_grid[#i,j] = ROOM_OBJECTS.stool.val;
 						}

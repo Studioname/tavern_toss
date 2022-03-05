@@ -15,6 +15,9 @@ if !ds_stack_empty(global.commands) {
 		case choose_random_direction:
 				choose_random_direction();
 				break;
+		case teleport:
+			teleport(global.collisions);
+			break;
 	}
 	alarm[0] = ALARM_SPEED;
 }

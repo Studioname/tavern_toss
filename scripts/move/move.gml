@@ -23,6 +23,5 @@ function move(){
 	//we check for treasure before setting value to player
 	//pickup();
 	check_if_escape(global.collisions, x div CELL_SIZE, y div CELL_SIZE, [EXIT_DOOR, ESCAPE_HATCH]);
-	track_loops(global.collisions);
 	ds_stack_pop(global.commands);
 }

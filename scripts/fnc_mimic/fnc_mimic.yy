@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "player",
-    "path": "folders/Scripts/player.yy",
+    "name": "enemies",
+    "path": "folders/Scripts/objects/enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "loop",
+  "name": "fnc_mimic",
   "tags": [],
   "resourceType": "GMScript",
 }

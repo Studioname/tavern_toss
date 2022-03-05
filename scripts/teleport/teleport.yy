@@ -6,7 +6,7 @@
     "path": "folders/Scripts/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "track_loops",
+  "name": "teleport",
   "tags": [],
   "resourceType": "GMScript",
 }

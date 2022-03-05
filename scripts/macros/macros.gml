@@ -159,6 +159,7 @@ global.enemy_data = {
 	troll : new enemy(noone, "Troll", -256, 50, 20, 2, fnc_troll),
 	barman : new enemy(noone, "Barman", -257,0,20,1000,fnc_barman),
 	bouncer : new enemy(noone, "Bouncer", -258,0,20,1000,fnc_barman),
+	mimic : new enemy(noone, "Mimic", -259,50,20,1,fnc_mimic),
 }
 
 global.item_data = ds_list_create();

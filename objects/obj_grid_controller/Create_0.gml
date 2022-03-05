@@ -30,10 +30,9 @@ generate_exit_door(global.collisions);
 generate_banquet_tables(global.collisions);
 generate_collision_objects_data(global.collisions, ROOM_OBJECTS);
 generate_stools(global.collisions);
-generate_collision_objects_data(global.collisions, WALL_OBJECTS);
 generate_escape_hatch(global.collisions);
+generate_collision_objects_data(global.collisions, WALL_OBJECTS);
+
 //paint tiles
 paint_tiles(global.collisions, global.collisions_tilemap);
 paint_tiles(global.floor, global.floor_tilemap);
-
-

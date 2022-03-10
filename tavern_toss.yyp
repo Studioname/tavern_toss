@@ -45,6 +45,7 @@
     {"id":{"name":"ds_grid_get_region_coords","path":"scripts/ds_grid_get_region_coords/ds_grid_get_region_coords.yy",},"order":14,},
     {"id":{"name":"fnc_barman","path":"scripts/fnc_barman/fnc_barman.yy",},"order":7,},
     {"id":{"name":"move","path":"scripts/move/move.yy",},"order":0,},
+    {"id":{"name":"generate_filler_collision_data","path":"scripts/generate_filler_collision_data/generate_filler_collision_data.yy",},"order":15,},
     {"id":{"name":"construct_menu_button","path":"scripts/construct_menu_button/construct_menu_button.yy",},"order":2,},
     {"id":{"name":"fnc_ham","path":"scripts/fnc_ham/fnc_ham.yy",},"order":2,},
     {"id":{"name":"create_objects_from_grid_data","path":"scripts/create_objects_from_grid_data/create_objects_from_grid_data.yy",},"order":9,},
@@ -184,7 +185,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.2.0.614",
+    "IDEVersion": "2022.2.1.618",
   },
   "resourceVersion": "1.5",
   "name": "tavern_toss",

@@ -51,6 +51,12 @@ function paint_tiles(_grid, _tilemap){
 					case ROOM_OBJECTS.banquet_table.val:
 						tilemap_set_at_pixel(_tilemap, 5, i * CELL_SIZE, j * CELL_SIZE);
 						break;
+					case ROOM_OBJECTS.bookcase.val:
+						tilemap_set_at_pixel(_tilemap, 14, i * CELL_SIZE, j * CELL_SIZE);
+						break;
+					case ROOM_OBJECTS.statue.val:
+						tilemap_set_at_pixel(_tilemap, 15, i * CELL_SIZE, j * CELL_SIZE);
+						break;
 				}
 			}
 		}

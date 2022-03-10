@@ -4,4 +4,5 @@ function go(){
 	ds_stack_reverse(global.commands_template);
 	ds_stack_copy(global.commands, global.commands_template);
 	obj_player.alarm[0] = ALARM_SPEED;
+	global.game_started = true;
 }

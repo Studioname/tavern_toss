@@ -109,6 +109,20 @@ global.collision_object_elements = {
 			w: 0,
 			h: 0,
 		},
+		bookcase : {
+			tileset: noone,
+			val: -36,
+			odds: 0,
+			w: 1,
+			h: 1,
+		},
+		statue : {
+			tileset: noone,
+			val: -37,
+			odds: 30,
+			w: 0,
+			h: 0,
+		},
 	},
 }
 

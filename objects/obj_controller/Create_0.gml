@@ -75,3 +75,6 @@ global.instructions[7][0] = spr_go;
 global.instructions[7][1] = _draw_x_anchor + (ICON_SIZE*7);
 global.instructions[7][2] = go;
 global.instructions[7][3] = [];
+
+//flag for buttons
+global.game_started = false;

@@ -32,7 +32,7 @@ generate_collision_objects_data(global.collisions, ROOM_OBJECTS);
 generate_stools(global.collisions);
 generate_escape_hatch(global.collisions);
 generate_collision_objects_data(global.collisions, WALL_OBJECTS);
-
+generate_filler_collision_data(global.collisions);
 //paint tiles
 paint_tiles(global.collisions, global.collisions_tilemap);
 paint_tiles(global.floor, global.floor_tilemap);
